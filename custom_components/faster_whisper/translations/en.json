@@ -1,0 +1,18 @@
+{
+  "config": {
+    "error": {
+      "download_model": "Can't download model"
+    },
+    "step": {
+      "user": {
+        "data": {
+          "model": "Model",
+          "language": "Language",
+          "beam_size": "Beam Size",
+          "cpu_threads": "CPU Threads (by default 4)"
+        },
+        "description": "**Important.** Loading a model can take a long time."
+      }
+    }
+  }
+}
