@@ -1,17 +1,16 @@
 {
   "domain": "faster_whisper",
   "name": "Faster Whisper",
-  "config_flow": true,
-  "documentation": "https://github.com/AlexxIT/FasterWhisper",
-  "issue_tracker": "https://github.com/AlexxIT/FasterWhisper/issues",
   "codeowners": [
     "@AlexxIT"
   ],
-  "dependencies": [
-  ],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/AlexxIT/FasterWhisper",
+  "iot_class": "calculated",
+  "issue_tracker": "https://github.com/AlexxIT/FasterWhisper/issues",
   "requirements": [
-    "wyoming-faster-whisper==0.0.3"
+    "wyoming-faster-whisper==1.0.1"
   ],
-  "version": "1.0.0",
-  "iot_class": "calculated"
+  "version": "1.0.0"
 }
