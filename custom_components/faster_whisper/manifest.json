@@ -9,8 +9,6 @@
   "documentation": "https://github.com/AlexxIT/FasterWhisper",
   "iot_class": "calculated",
   "issue_tracker": "https://github.com/AlexxIT/FasterWhisper/issues",
-  "requirements": [
-    "wyoming-faster-whisper==1.0.1"
-  ],
+  "requirements": [],
   "version": "1.0.0"
 }
