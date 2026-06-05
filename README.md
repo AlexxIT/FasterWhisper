@@ -18,6 +18,8 @@ You have to delete unnecessary models yourself from the Home Assistant config fo
 
 ## Installation
 
+[![](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=AlexxIT&repository=FasterWhisper&category=Integration)
+
 [HACS](https://hacs.xyz/) > Integrations > 3 dots (upper top corner) > Custom repositories > URL: `AlexxIT/FasterWhisper`, Category: Integration > Add > wait > Faster Whisper > Install
 
 Or manually copy `faster_whisper` folder from [latest release](https://github.com/AlexxIT/FasterWhisper/releases/latest) to `/config/custom_components` folder.
