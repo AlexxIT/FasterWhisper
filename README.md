@@ -1,10 +1,10 @@
 # Faster Whisper for Home Assistant
 
-[Faster Whisper](https://github.com/guillaumekln/faster-whisper) is a local Speech-to-Text engine. With [Home Assistant](https://www.home-assistant.io/), it allows you to create your own personal local voice assistant.
+[Faster Whisper](https://github.com/SYSTRAN/faster-whisper) is a local Speech-to-Text engine. With [Home Assistant](https://www.home-assistant.io/), it allows you to create your own personal local voice assistant.
 
-This is same code base as Home Assistant [Wisper Add-on](https://github.com/home-assistant/addons), developed by [@synesthesiam](https://github.com/synesthesiam) from [Nabu Casa](https://www.nabucasa.com/).
+Typically, add-on users use the official version of [Whisper App](https://github.com/home-assistant/addons) from the Home Assistant core team. And that's right, because it runs in a separate Docker container and isn't limited by the Container version of Home Assistant.
 
-But packaged as Home Assistant custom integration. This can be useful when your environment does not allow you to install add-ons. For example, when your Home Assistant is running in **venv**, **Docker** or [Windows](https://github.com/AlexxIT/HassWP).
+Building a working version of the Faster Whisper dependencies for Alpine Linux (on which Home Assistant is based) was a real challenge. But I got it done - [ctranslate2-alpine](https://github.com/AlexxIT/ctranslate2-alpine).
 
 ## Warnings
 
@@ -28,7 +28,7 @@ Or manually copy `faster_whisper` folder from [latest release](https://github.co
 
 Settings > Integrations > Add Integration > Faster Whisper
 
-You can setup multiple integrations with different models, languages, and other settings. If you need to change settings, just delete the integration and set it up again.
+You can setup multiple integrations with different models, and other settings. If you need to change settings, just delete the integration and set it up again.
 
 Remember that each integration setup will consume a significant amount of RAM.
 
