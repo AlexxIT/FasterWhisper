@@ -55,9 +55,10 @@ class FasterWhisperPlayer(MediaPlayerEntity):
 
         try:
             r = await async_get_clientsession(self.hass).get(media_id)
-            data = await r.read()
+            audio = await r.read()
 
-            segments, info = await self.model.transcribe(data, self.source)
+            language = self.source if self.source != "auto" else None
+            segments, info = await self.model.transcribe(audio, language)
 
             self._attr_media_title = " ".join(i.text for i in segments).strip()
             self._attr_media_duration = info.duration

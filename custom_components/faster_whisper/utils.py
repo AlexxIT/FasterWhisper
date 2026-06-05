@@ -32,8 +32,6 @@ class Model:
         return self.model.supported_languages
 
     async def transcribe(self, audio: bytes, language: str = None):
-        if language == "auto":
-            language = None
         async with self.lock:
             return self.model.transcribe(
                 io.BytesIO(audio), language, beam_size=self.beam_size
