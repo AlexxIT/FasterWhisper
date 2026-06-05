@@ -50,11 +50,16 @@ class FasterWhisperSTT(stt.SpeechToTextEntity):
     async def async_process_audio_stream(
         self, metadata: stt.SpeechMetadata, stream: AsyncIterable[bytes]
     ) -> stt.SpeechResult:
-        audio = b""
+        # WAV file, PCM little endian, 16000Hz, 1 channel
+        audio = (
+            b"RIFF\xff\xff\xff\xffWAVEfmt \x10\x00\x00\x00"
+            b"\x01\x00\x01\x00\x80\x3e\x00\x00\x00\x7d\x00"
+            b"\x00\x02\x00\x10\x00data\xff\xff\xff\xff"
+        )
         async for chunk in stream:
             audio += chunk
 
-        segments, _ = await self.model.transcribe(audio)
+        segments, _ = await self.model.transcribe(audio, metadata.language)
         text = " ".join(i.text for i in segments).strip()
 
         return stt.SpeechResult(text, stt.SpeechResultState.SUCCESS)
